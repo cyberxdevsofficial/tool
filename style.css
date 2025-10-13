@@ -1,0 +1,105 @@
+/* Reset + base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: black;
+  overflow-y: auto;
+  color: white;
+  min-height: 100vh;
+}
+
+html {
+  overflow-y: auto;
+}
+
+/* Background canvas sits behind everything */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Main container */
+.container {
+  max-width: 450px;
+  margin: 70px auto;
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #00ffe7;
+  border-radius: 18px;
+  padding: 30px 25px;
+  box-shadow: 0 0 50px #00ffe7;
+  text-align: center;
+  animation: fadeIn 1.2s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Headings and subtitle */
+h1 {
+  color: white;
+  font-size: 44px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #00ffe7, 0 0 10px #00ffe7;
+  margin-bottom: 18px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #cfcfcf;
+  margin-bottom: 18px;
+}
+
+/* Buttons (links styled as buttons) */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px 16px;
+  border: 2px solid #00ffe7;
+  background: transparent;
+  color: #ffd700;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  box-shadow: 0 0 10px transparent;
+}
+
+.btn:hover {
+  background: #00ffe7;
+  color: #000;
+  transform: scale(1.02);
+  box-shadow: 0 0 18px #00ffe7;
+}
+
+.btn i {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  margin-top: 18px;
+}
